@@ -2,12 +2,13 @@
   "name": "Sponsor Me Extension",
   "description": "This extension can help you to find a job witht sponsorship easily",
   "version": "1.0",
-  "manifest_version": 1,
+  "manifest_version": 3,
+  "version_name": "1.0.0",
   "permissions": ["storage", "activeTab", "scripting", "clipboardWrite"],
   "action": {},
   "content_scripts": [
     {
-      "matches": ["https://www.nytimes.com/games/wordle/index.html"],
+      "matches": ["https://www.linkedin.com/*"],
       "js": ["index.js"]
     }
   ]
