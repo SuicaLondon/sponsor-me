@@ -47,8 +47,9 @@ button.addEventListener('click', () => {
 
 function appendPage(companies) {
     let companyList = '<div>'
-    companies.forEach(company => {
-        companyList += `
+    if (companies.length > 0) {
+        companies.forEach(company => {
+            companyList += `
             <div style="margin: 1rem; color: white;">
                 <h3>${company.name}</h3>
                 <p>${company.county} ${company.city}</p>
@@ -57,8 +58,11 @@ function appendPage(companies) {
                 <p>${company.route}</p>
             </div>
         `
-    })
-    companyList += '</div>'
+        })
+        companyList += '</div>'
+    } else {
+        companyList += `<div style="margin: 1rem; color: white;">No Data at all</div>`
+    }
     console.log(companyList.length)
     companyListView.innerHTML = companyList
     companyView.style.display = 'flex'
