@@ -24,11 +24,11 @@ function getSponsorshipCompanies(name) {
 
 const e = document.createElement('div')
 e.innerHTML = `
-<div id="sponsorship-button" style="position: fixed; right: 20px; top: 50px; width: 50px; height: 50px; border-radius: 50%; border: 1px solid #ddd; background-color: #818384; display: flex; justify-content: center; align-items: center; color: #fff; opacity: .7; cursor: pointer; z-index: 51;">
+<div id="sponsorship-button" style="position: fixed; right: 20px; top: 20px; width: 50px; height: 50px; border-radius: 50%; border: 1px solid #ddd; background-color: #818384; display: flex; justify-content: center; align-items: center; color: #fff; opacity: .7; cursor: pointer; z-index: 51;">
     Toogle
 </div>
 
-<div id="company-view" style="display: none; position: fixed; right: 20px; top: 50px; padding: 10px; padding-right: 50px; width: 300; height: 500px; flex-wrap: wrap; background-color: #818384; color: #fff; border-radius: 1rem; z-index: 50;">
+<div id="company-view" style="display: none; position: fixed; right: 20px; top: 70px; padding: 10px; padding-right: 50px; width: 300; height: 500px; flex-wrap: wrap; background-color: #818384; color: #fff; border-radius: 1rem; z-index: 50;">
     <div id="company-list" style="margin-bottom: 1rem; width: 275px; height: 100%; word-wrap:break-word; overflow: scroll;"></div>
 </div>
 `
@@ -50,12 +50,12 @@ function appendPage(companies) {
     if (companies.length > 0) {
         companies.forEach(company => {
             companyList += `
-            <div style="margin: 1rem; color: white;">
-                <h3>${company.name}</h3>
-                <p>${company.county} ${company.city}</p>
-                <p>${company.rate}</p>
-                <p>${company.type}</p>
-                <p>${company.route}</p>
+            <div style="margin: 1rem;">
+                <h3 style="color: white;">${company.name}</h3>
+                <p style="color: white;">${company.county} ${company.city}</p>
+                <p style="color: white;">${company.rate}</p>
+                <p style="color: white;">${company.type}</p>
+                <p style="color: white;">${company.route}</p>
             </div>
         `
         })
