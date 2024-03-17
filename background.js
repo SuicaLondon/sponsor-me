@@ -11,7 +11,9 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
   console.log(info.selectionText);
   const url = "https://suica.dev/api/sponsorship/" + info.selectionText;
 
-  fetch(url)
+  fetch(url, {
+    mode: "no-cors",
+  })
     .then((result) => {
       console.log(result);
     })

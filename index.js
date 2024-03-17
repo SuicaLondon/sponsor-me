@@ -11,7 +11,9 @@ addEventListener("copy", (event) => {
 
 function getSponsorshipCompanies(name) {
   const url = "https://suica.dev/api/sponsorship/" + name;
-  fetch(url)
+  fetch(url, {
+    mode: "no-cors",
+  })
     .then((response) => {
       console.log(response);
       response
