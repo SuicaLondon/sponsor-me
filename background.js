@@ -12,7 +12,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
   const url = "https://suica.dev/api/sponsorship/" + info.selectionText;
 
   fetch(url, {
-    mode: "no-cors",
+    mode: "cors",
   })
     .then((result) => {
       console.log(result);
